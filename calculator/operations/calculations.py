@@ -3,11 +3,17 @@
 
 class Calculations:
     """Calculations Class Contents:"""
+
     # pylint: disable=too-few-public-methods
 
     def __init__(self, values: tuple):
         """Constructor Method"""
         self.values = Calculations.convert_args_to_list_float(values)
+
+    @classmethod
+    def create(cls, values: tuple):
+        """factory method"""
+        return cls(values)
 
     @staticmethod
     def convert_args_to_list_float(values):
@@ -15,4 +21,4 @@ class Calculations:
         value_float = []
         for item in values:
             value_float.append(float(item))
-        return value_float
+        return tuple(value_float)
