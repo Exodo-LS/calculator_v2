@@ -6,73 +6,68 @@ from calculator.operations.division import Division
 
 
 class Calculations:
-    """Manages history of the calculator"""
+    """Calculations class manages the history of calculations"""
     history = []
 
     # pylint: disable=too-few-public-methods
     @staticmethod
     def clear_history():
-        """Clears history list"""
+        """clear the history of calculations"""
         Calculations.history.clear()
         return True
 
     @staticmethod
-    def get_history_len():
-        """Returns the history list"""
+    def count_history():
+        """get number of items in history"""
         return len(Calculations.history)
 
     @staticmethod
-    def get_calculation_first():
-        """Returns the first item of the history"""
-        return Calculations.history[0]
-
-    @staticmethod
-    def get_calculation_last():
-        """Returns the last item of the history"""
+    def get_last_calculation_object():
+        """get last calculation"""
         return Calculations.history[-1]
 
     @staticmethod
-    def get_calculation_last_value():
-        """Returns the last item of the history"""
-        calculation = Calculations.get_calculation_last()
+    def get_last_calculation_result_value():
+        """get last calculation convenience method"""
+        calculation = Calculations.get_last_calculation_object()
         return calculation.get_result()
 
     @staticmethod
-    def get_calculation_select(num):
-        """Returns selected item in history"""
+    def get_first_calculation():
+        """get first calculation"""
+        return Calculations.history[0]
+
+    @staticmethod
+    def get_calculation(num):
+        """ get a specific calculation from history"""
         return Calculations.history[num]
 
     @staticmethod
-    def remove_calculation(num):
-        """Removes a select item from history"""
-        Calculations.history.pop(num)
-        return Calculations.history
+    def add_calculation(calculation):
+        """ get a generic calculation from history"""
+        return Calculations.history.append(calculation)
 
     @staticmethod
-    def history_append(calculated):
-        """Appends Item To List"""
-        Calculations.history.append(calculated)
+    def add_addition_calculation(values):
+        """create an addition and add object to history using factory method create"""
+        Calculations.add_calculation(Addition.create(values))
+        # Get the result of the calculation
+        return Calculations.get_last_calculation_object()
 
     @staticmethod
-    def append_subtraction(values):
-        """Creates Subtraction Object And Adds It To History"""
-        Calculations.history_append(Subtraction.create(values))
-        return True
+    def add_subtraction_calculation(values):
+        """create a subtraction object to history using factory method create"""
+        Calculations.add_calculation(Subtraction.create(values))
+        return Calculations.get_last_calculation_object()
 
     @staticmethod
-    def append_multiplication(values):
-        """Creates Multiplication Object And Adds It To History"""
-        Calculations.history_append(Multiplication.create(values))
-        return True
+    def add_multiplication_calculation(values):
+        """Add a multiplication object to history using factory method create"""
+        Calculations.add_calculation(Multiplication.create(values))
+        return Calculations.get_last_calculation_object()
 
     @staticmethod
-    def append_division(values):
-        """Creates Division Object And Adds It To History"""
-        Calculations.history_append(Division.create(values))
-        return True
-
-    @staticmethod
-    def append_addition(values):
-        """Creates Addition Object And Adds It To History"""
-        Calculations.history_append(Addition.create(values))
-        return True
+    def add_division_calculation(values):
+        """Add a division object to history using factory method create"""
+        Calculations.add_calculation(Division.create(values))
+        return Calculations.get_last_calculation_object()

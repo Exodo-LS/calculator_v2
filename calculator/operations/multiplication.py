@@ -1,13 +1,13 @@
-"""Multiplication Class V2"""
+"""Multiplication Class"""
 from calculator.operations.calculations import Calculations
 
 
 class Multiplication(Calculations):
-    """Contents of Multiplication:"""
+    """multiplication calculation object"""
 
     def get_result(self):
-        """Gets Multiplication Results"""
+        """get the multiplication results"""
         value_product = 1.0
         for value in self.values:
-            value_product *= value
+            value_product = value_product * value
         return value_product

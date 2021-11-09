@@ -2,35 +2,34 @@
 from calculator.history.calculations import Calculations
 
 
+# the calculator class just contains the methods to calculate
 class Calculate:
-    """This is the contents of calculate.py"""
+    """ This is the Calculator class"""
 
-    # It just calls methods from the Calculations class
+    # the calculator class just calls methods on Calculations class
     @staticmethod
-    def get_result():
-        """This returns the latest result of the calculator"""
-        return Calculations.get_calculation_last()
-
-    @staticmethod
-    def add_values(tuple_values: tuple):
-        """Addition Operation"""
-        Calculations.append_addition(tuple_values)
-        return True
+    def get_last_result_value():
+        """ This is the gets the result of the calculation"""
+        # I made this method so that I don't have more than one action per function
+        return Calculations.get_last_calculation_result_value()
 
     @staticmethod
-    def subtract_values(tuple_values: tuple):
-        """Subtraction Operation"""
-        Calculations.append_subtraction(tuple_values)
-        return True
+    # tuple allows me to pass in as many values as a I want
+    def add_numbers(tuple_values: tuple):
+        """ adds list of numbers and returns an addition result object"""
+        return Calculations.add_addition_calculation(tuple_values)
 
     @staticmethod
-    def multiply_values(tuple_values: tuple):
-        """Multiplication Operation"""
-        Calculations.append_multiplication(tuple_values)
-        return True
+    def subtract_numbers(tuple_values: tuple):
+        """ subtract a list of numbers from result and returns a subtraction result object"""
+        return Calculations.add_subtraction_calculation(tuple_values)
 
     @staticmethod
-    def divide_values(tuple_values: tuple):
-        """Division Operation"""
-        Calculations.append_division(tuple_values)
-        return True
+    def multiply_numbers(tuple_values: tuple):
+        """ multiplication number from result and returns a multiplication result object"""
+        return Calculations.add_multiplication_calculation(tuple_values)
+
+    @staticmethod
+    def divide_numbers(tuple_values: tuple):
+        """ division number from result and returns a division result object"""
+        return Calculations.add_division_calculation(tuple_values)

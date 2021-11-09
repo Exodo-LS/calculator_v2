@@ -1,13 +1,13 @@
-"""Subtraction Class V2"""
+"""Subtraction Class"""
 from calculator.operations.calculations import Calculations
 
 
 class Subtraction(Calculations):
-    """Contents of Subtraction:"""
+    """subtraction calculation object"""
 
     def get_result(self):
-        """Gets Subtraction Results"""
-        value_diff = 0.0
+        """get the subtraction results"""
+        value_dif = 0.0
         for value in self.values:
-            value_diff = value_diff - value
-        return value_diff
+            value_dif = value_dif - value
+        return value_dif
