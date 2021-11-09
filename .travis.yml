@@ -11,4 +11,4 @@ branches:
   only:
     - main
     - development
-    - revised
+    - Revised
