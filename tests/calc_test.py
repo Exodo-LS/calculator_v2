@@ -29,11 +29,11 @@ def test_calc_add(clear_history):
 def test_calc_subtract(clear_history):
     """This tests the Subtraction Function"""
     # pylint: disable=unused-argument,redefined-outer-name
-    my_tuple = (1.0, 3.0, 5.0)
+    my_tuple = (1.0, 3.0, 5.0, 6.0)
     calc_result = Calculate.subtract_numbers(my_tuple)
     assert isinstance(calc_result, Subtraction)
-    assert Calculate.get_last() == -9.0
-    assert calc_result.get_result() == -9.0
+    assert Calculate.get_last() == -15.0
+    assert calc_result.get_result() == -15.0
 
 
 def test_calc_multiply(clear_history):
@@ -52,3 +52,12 @@ def test_calc_divide(clear_history):
     Calculate.divide_numbers(my_tuple)
     assert isinstance(Calculate.divide_numbers(my_tuple), Division)
     assert Calculate.get_last() == 0.1
+
+
+def test_calc_divide_zero(clear_history):
+    """This tests the Division Function"""
+    # pylint: disable=unused-argument,redefined-outer-name
+    my_tuple = (1.0, 5.0, 2.0, 0.0)
+    Calculate.divide_numbers(my_tuple)
+    assert isinstance(Calculate.divide_numbers(my_tuple), Division)
+    assert Calculate.get_last() == "Divide By Zero Detected"

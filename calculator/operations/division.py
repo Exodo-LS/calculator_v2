@@ -9,5 +9,5 @@ class Division(Calculations):
         """Gets Division Results"""
         value_div = 1.0
         for value in self.values:
-            value_div = (value_div / value) if value != 0 else 0
+            value_div = (value_div / value) if value != 0 else "Divide By Zero Detected"
         return value_div
