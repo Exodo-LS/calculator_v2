@@ -27,7 +27,7 @@ class Calculations:
         return Calculations.history[-1]
 
     @staticmethod
-    def get_last_calculation_result_value():
+    def get_last_calculation():
         """get last calculation convenience method"""
         calculation = Calculations.get_last_calculation_object()
         return calculation.get_result()
@@ -38,7 +38,7 @@ class Calculations:
         return Calculations.history[0]
 
     @staticmethod
-    def get_calculation(num):
+    def get_calculation_select(num):
         """ get a specific calculation from history"""
         return Calculations.history[num]
 

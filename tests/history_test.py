@@ -45,20 +45,20 @@ def test_clear_calculation_history(clear_history, operation_config):
     assert Calculations.clear_history() == True
 
 
-def test_get_calculation(clear_history, operation_config):
+def test_get_calculation_select(clear_history, operation_config):
     """Testing getting a specific calculation out of the history"""
     # pylint: disable=unused-argument,redefined-outer-name
-    assert Calculations.get_calculation(1).get_result() == -3
-    assert Calculations.get_calculation(2).get_result() == 2
+    assert Calculations.get_calculation_select(1).get_result() == -3
+    assert Calculations.get_calculation_select(2).get_result() == 2
 
 
-def test_get_calc_last_result_value(clear_history, operation_config):
+def test_get_last_calculation(clear_history, operation_config):
     """Testing getting the last calculation from the history"""
     # pylint: disable=unused-argument,redefined-outer-name
-    assert Calculations.get_last_calculation_result_value() == 0.5
+    assert Calculations.get_last_calculation() == 0.5
 
 
-def test_get_calculation_first(clear_history, operation_config):
+def test_get_first_calculation(clear_history, operation_config):
     """Testing getting the last calculation from the history"""
     # pylint: disable=unused-argument,redefined-outer-name
     assert Calculations.get_first_calculation().get_result() == 3
@@ -70,7 +70,7 @@ def test_history_count(clear_history, operation_config):
     assert Calculations.count_history() == 4
 
 
-def test_get_calc_last_result_object(clear_history, operation_config):
+def test_get_last_calculation_object(clear_history, operation_config):
     """Testing getting the last calculation from the history"""
     # pylint: disable=unused-argument,redefined-outer-name
     # This test if it returns the last calculation as an object
