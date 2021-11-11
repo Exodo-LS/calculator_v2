@@ -44,8 +44,14 @@ class Calculations:
 
     @staticmethod
     def add_calculation(calculation):
-        """ get a generic calculation from history"""
+        """ add calculation to history"""
         return Calculations.history.append(calculation)
+
+    @staticmethod
+    def remove_calculation(num):
+        """ removes a calculation from history"""
+        Calculations.history.pop(num)
+        return True
 
     @staticmethod
     def add_addition_calculation(values):

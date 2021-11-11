@@ -73,5 +73,12 @@ def test_history_count(clear_history, operation_config):
 def test_get_last_calculation_object(clear_history, operation_config):
     """Testing getting the last calculation from the history"""
     # pylint: disable=unused-argument,redefined-outer-name
-    # This test if it returns the last calculation as an object
     assert isinstance(Calculations.get_last_calculation_object(), Division)
+
+
+def test_remove_calculation(clear_history, operation_config):
+    """Testing removing a calculation from history"""
+    # pylint: disable=unused-argument,redefined-outer-name
+    assert Calculations.count_history() == 4
+    Calculations.remove_calculation(3)
+    assert Calculations.count_history() == 3
