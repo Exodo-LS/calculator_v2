@@ -25,8 +25,17 @@
     <strong>Result: </strong> {{ result }}
 
     {% if data %}
-        <table>
-            {% for item in data %}
+        <table id="data" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>ID</th>
+                    <th>Position</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
                 <!--- This will not work you have to think about it--->
                 <TR>
                     <TD class="c1"><IMG src="favicon.ico"></TD>
@@ -36,6 +45,7 @@
                     <TD class="c5"><SPAN>{{ item.status }}</SPAN></TD>
                 </TR>
             {% endfor %}
+            </tbody>
         </table>
         {% else %}
 	        <h1>There are no calculations</h1>
