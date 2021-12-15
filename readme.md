@@ -22,8 +22,10 @@
 ![Result Image](app/static/images/result.png)
 
 ## History Form:
-![History Image](app/static/images/cvsresults.png)
-![CSV Image](app/static/images/cvsfile.png)
+![History Image](app/static/images/csvresults.png)
+
+## CSV File:
+![CSV Image](app/static/images/csvfile.png)
 
 ## Glossary:
 ![Glossary Image](app/static/images/Glossary.png)
@@ -38,4 +40,9 @@
 ![Docker Image](app/static/images/Docker.png)
 
 
-# Video Link:
+# Video Links:
+## Main Demonstration:
+  [Main Demo](https://youtu.be/Ux-bOTnixSQ)
+## Responsiveness Demo:
+  [Demo 2](https://youtu.be/YCuMQO44tm4)
+
