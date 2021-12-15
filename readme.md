@@ -1,38 +1,41 @@
-#Calculator Final Project
+# Calculator Final Project
 
 [![Build Status](https://app.travis-ci.com/Exodo-LS/calculator_v2.svg?branch=main)](https://app.travis-ci.com/Exodo-LS/calculator_v2)
 
-Flash Message:  
+## Flash Message:  
 ![Flask Flash Image](app/static/images/Flash.png)
 
-Table Generation:
+## Table Generation:
 ![Flask Table Image](app/static/images/Tables.png)
 
-Pytest:
+## Pytest:
 ![Pytest Image](app/static/images/TestPt1.png)
 ![Pytest Image](app/static/images/TestPt2.png)
 
-Index:
+## Index:
 ![Index Image](app/static/images/Index.png)
 
-Calculator Form:
+## Calculator Form:
 ![Calculator Image](app/static/images/calcdivision.png)
 
-Result Form:
+## Result Form:
 ![Result Image](app/static/images/result.png)
 
-History Form:
+## History Form:
 ![History Image](app/static/images/cvsresults.png)
 ![CSV Image](app/static/images/cvsfile.png)
 
-Glossary:
+## Glossary:
 ![Glossary Image](app/static/images/Glossary.png)
 
-Commands:
+## Commands:
 ![Commands Image](app/static/images/Commands.png)
 
-Git:
+## Git:
 ![Git Image](app/static/images/Git.png)
 
-Docker:
+## Docker:
 ![Docker Image](app/static/images/Docker.png)
+
+
+# Video Link:
