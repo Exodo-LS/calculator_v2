@@ -1,0 +1,9 @@
+value1,value2,operation,result
+2,6,addition,8.0
+4,1,addition,5.0
+2,6,division,0.3333333333333333
+4,6,multiplication,24.0
+5,0,division,Divide By Zero Error
+4,2,addition,6.0
+4,6,addition,10.0
+4,3,division,1.3333333333333333

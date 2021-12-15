@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+
+<div>
+  <section style="padding: 1.5em">
+    <div style="padding: 1em">
+      <h1>Welcome to the GitPage</h1>
+        <p>This Page will offer a brief GitHub HowTo.</p>
+      <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+      <script src="js/plugins.js"></script>
+      <script src="js/main.js"></script>
+    </div>
+  </section>
+  <section style="padding: 1.5em">
+    <div>
+      <h3>Step 1 - Make Account and First Repository!</h3>
+        <ul>
+          <li>Make a Github account.</li>
+          <li>Make your first repository by looking at the upper right corner, click and  select New repository. Next name your repository hello-world.Write a short description. Select Initialize this repository with a README. Finally Click create New Repository.</li>
+          <li>Creating a Branch. Well, first Branching is the way to work on different versions of a repository at one time.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Step 2 - Create a New Branch.</h3>
+          <ul>
+            <li>Go to your new repository hello-world or call it whatever you want.</li>
+            <li>Click the drop-down at the top of the file list that says <b>branch: main</b>.</li>
+            <li>Type a branch name, readme-edits, into the new branch text box area.</li>
+            <li>Select the blue <b>Create branch</b> box or hit “Enter” on your keyboard.</li>
+          </ul>
+      </div>
+      <div>
+        <h3>Step 3 - Make and commit changes.</h3>
+        <ul>
+          <li>Click the README.md file.</li>
+          <li>Click the icon in the upper right corner of the file view to edit.</li>
+          <li>Write a commit message that describes your changes.</li>
+          <li>Click <b>Commit changes</b> button.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Step 4 - Open Pull Request.</h3>
+        <ul>
+          <li>Click the <b>Pull Request</b> tab, then from the Pull Request page, click the green <b>New pull request</b> button.</li>
+          <li>Select the branch you made, readme-edits, to compare with main (the original).</li>
+          <li>When you’re satisfied that these are the changes you want to submit, click the big green <b>Create Pull Request</b> button.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Step 5 - Merge your Pull Request.</h3>
+        <ul>
+          <li>Click the green <b>Merge pull request</b> button to make merge the changes go into the main.</li>
+          <li>Click <b>Confirm merge</b>.</li>
+          <li>Go ahead and delete the branch, since its changes have been incorporated, with the <b>Delete branch</b> button in the purple box.</li>
+        </ul>
+      </div>
+  </section>
+  <section style="padding: 1.5em">
+    <div class="closingwords">
+      <h1>Before You Continue, Thank you for visiting the page. Also below is a link to GitHub!</h1>
+      <button onclick="window.location.href='https://github.com/'">GitHub</button>
+    </div>
+  </section>
+</div>
+{% endblock %}

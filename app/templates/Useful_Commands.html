@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+
+<section style="padding: 2em">
+  <div>
+    <h1>Useful Commands for Git Bash</h1>
+  </div>
+  <div style="padding: 3em">
+    <ul>
+      <li><b>git config --global user.name “[firstname lastname]”:</b> set a name that is identifiable for credit when review version history</li>
+      <li><b>git config --global user.email “[valid-email]”:</b> set an email address that will be associated with each history marker</li>
+      <li><b>git config --global color.ui auto:</b> set automatic command line coloring for Git for easy reviewing</li>
+      <li><b>git init:</b> initialize an existing directory as a Git repository</li>
+      <li><b>git clone[url]:</b> retrieve an entire repository from a hosted location via URL</li>
+      <li><b>git status:</b> show modified files in working directory, staged for your next commit</li>
+      <li><b>git add [file]:</b> add a file as it looks now to your next commit (stage)</li>
+      <li><b>git reset [file]:</b> unstage a file while retaining the changes in working directory</li>
+      <li><b>git diff:</b> diff of what is changed but not staged</li>
+      <li><b>git diff --staged:</b> diff of what is staged but not yet committed</li>
+      <li><b>git commit -m “[descriptive message]”:</b> commit your staged content as a new commit snapshot</li>
+      <li><b>git branch:</b> list your branches. a * will appear next to the currently active branch </li>
+      <li><b>git branch [branch-name]:</b> create a new branch at the current commit</li>
+      <li><b>git checkout:</b> switch to another branch and check it out into your working directory </li>
+      <li><b>git rm [file]:</b> delete the file from project and stage the removal for commit</li>
+      <li><b> git mv [existing-path] [new-path]:</b> change an existing file path and stage the move </li>
+      <li><b>git remote add [alias] [url]:</b> add a git URL as an alias</li>
+      <li><b>git fetch [alias]:</b> fetch down all the branches from that Git remote </li>
+      <li><b>git merge [alias]/[branch]:</b> merge a remote branch into your current branch to bring it up to date </li>
+      <li><b>git push [alias] [branch]:</b> Transmit local branch commits to the remote repository branch </li>
+      <li><b>git pull:</b> fetch and merge any commits from the tracking remote branch </li>
+    </ul>
+  </div>
+</section>
+
+<section style="padding: 2em">
+  <div>
+    <h1>Useful Commands for vi</h1>
+  </div>
+  <div style="padding: 3em">
+    <ul>
+    <li><b>vim or vi -</b> Run vim and open the given filename. </li>
+    <li><b>:w:</b> Save file. </li>
+    <li><b>:x or SHIFT ZZ -</b> Save and exit. </li>
+    <li><b>:q -</b> Exit if no changes have been made. </li>
+    <li><b>:q! -</b> Exit and undo any changes made. </li>
+    <li><b>wq -</b> Write and Quit </li>
+    <li><b>:set nu -</b> Display line numbers. </li>
+    <li><b>i -</b> insert mode </li>
+    <li><b>Escape -</b> get out of insert mode </li>
+    <li><b>SHIFT : (colon) -</b> command prompt for vi </li>
+    <li><b> W = command to write:</b></li>
+    </ul>
+  </div>
+</section>
+{% endblock %}

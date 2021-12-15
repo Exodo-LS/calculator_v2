@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+<div style="padding: 1em">
+  <section style="padding: 1.5em">
+    <div>
+      <h1>Docker Tutorial</h1>
+        <br>
+    </div>
+    <h2>Configuring NGINX For Docker:</h2>
+    <p>1. Boot up Git Bash or any type of command prompt and change directories to the directory that possesses your git repository.</p>
+    <p>2. Next, type "vi Dockerfile" in the terminal to create and open a file called Dockerfile with the vi editor.</p>
+    <p>3. Type in the following code: <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>FROM nginx:latest4 <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COPY ./public_html/ /usr/share/nginx/html </b></p>
+    <p>4. Once completed, press shift followed by two z presses to save the file. Now repeat the second step, but name the file "docker-compose.yml"</p>
+    <p>5. Type in the following code: <br> <b>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;web: <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image: nginx <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;volumes: <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ./public_html:/usr/share/nginx/html/
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ports: <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- "8080:80" <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;environment: <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- NGINX_HOST=foobar.com<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- NGINX_PORT=80 </b></p>
+    <p>6. Press shift followed by two z presses to save the file and just like that you have configured the Apache server to run on Docker.</p>
+    <p>7. Run the command "docker-compose up -d" in the terminal to start up the Apache Container. It will take a little bit of time to start up.</p>
+    <p>8. Once the container finishes the start up process, open Docker Desktop to view that the container is running. You can either type in "http://localhost:8080/" or click on the container and click open in browser to view your Apache Web Server.</p>
+    <h2>Just like that, you have configured NGINX to run on Docker. The next tutorial will show how to take this web server and host it to the Azure Cloud.</h2>
+    <button onclick="window.location.href='https://github.com/Exodo-LS/is218projectV2.git'">Click here to view our repository</button>
+  </section>
+</div>
+<br>
+{% endblock %}

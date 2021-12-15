@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+<div style="padding: 5em">
+    <h1>Completed Calculations Table</h1>
+    <p>This table serves as the complete history of each record calculation. Each calculation is written on a csv file
+    that this page reads.</p>
+    <br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                {% for col in titles %}
+                <th scope="col">{{col}}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in row_data %}
+            <tr>
+                {% for col, row_ in zip(titles, row) %}
+                <th scope="row">{{row_}}</th>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+</div>
+
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}
