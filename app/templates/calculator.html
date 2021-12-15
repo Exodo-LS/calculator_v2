@@ -9,7 +9,7 @@
     </style>
 {% endblock %}
 {% block content %}
-
+<div style="display: block; padding: 1em" align="center">
     <h1>Calculator</h1>
      {% if error %}
          <div class="alert alert-danger error" role="alert">
@@ -44,6 +44,9 @@
         </fieldset>
 
         <input type="submit" value="Submit">
+        <br>
+        <img src="{{ url_for('static', filename='images/calculator.png') }}">
     </form>
   </div>
+</div>
 {% endblock %}

@@ -16,11 +16,21 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
-    <h1>IS 218 Final Project</h1>
-    <p class="important">
-      Welcome to the Simplistic Studios. This webpage is combination of all three projects assigned during the fall 2021
-        semester. Here you will see some articles along with a working calculator that takes user inputs.
-        <br>
-        <img src="{{ url_for('static', filename='images/SimplisticStudios.png') }}">
-    </p>
+    <div style="padding: 1.5em">
+        <h1>IS 218 Final Project</h1>
+        <p class="important">
+            Welcome to the Simplistic Studios. This webpage is combination of all three projects assigned during the fall 2021
+            semester. Here you will see some articles along with a working calculator that takes user inputs.
+            <br>
+            <img src="{{ url_for('static', filename='images/SimplisticStudios.png') }}">
+        </p>
+        <h2>A Little Bit About Me</h2>
+        <p>Hello my name is Mohammad-Shamel Agha. I am a 4th year student at NJIT with a major in Information Technology.
+            I have knowledge with topics such as Web Development, Networking, and Software Development. Im an avid Destiny 2
+            and Halo fan.
+            <br>
+            <img src="{{ url_for('static', filename='images/Me.png') }}">
+        </p>
+    </div>
+
 {% endblock %}

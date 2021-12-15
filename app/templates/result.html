@@ -9,6 +9,7 @@
     </style>
 {% endblock %}
 {% block content %}
+<div style="padding: 2.5em">
     <h1>Calculation Result</h1>
     {% with messages = get_flashed_messages() %}
         {% if messages %}
@@ -21,10 +22,10 @@
     {% endwith %}
 
     <h2>Result Table</h2>
-    <p>The completed operation will be displayed in the form of a table. Do not worry you will be able to see all the
-    results in another table.</p>
+    <p>The result table serves a just to show what you inputted. The inputs and result are written to a csv file. Do not
+    worry, this calculator can take multiple calculations. The full list of calculations done are read to another table.
+    I will show that table, do not worry.</p>
     <br>
-    {% if data %}
         <table id="data" class="table table-striped">
             <thead>
                 <tr>
@@ -35,22 +36,13 @@
                 </tr>
             </thead>
             <tbody>
-                {% for item in data %}
                 <tr>
-                    <td class="c1">{{ item }}</td>
-                    <td class="c2">{{ item }}</td>
-                    <td class="c3"><SPAN>{{ item }}</SPAN></td>
-                    <td class="c4"><SPAN>{{ item }}</SPAN></td>
+                    <td class="c1">{{ value1 }}</td>
+                    <td class="c2">{{ value2 }}</td>
+                    <td class="c3"><SPAN>{{ operation }}</SPAN></td>
+                    <td class="c4"><SPAN>{{ result }}</SPAN></td>
                 </tr>
-            {% endfor %}
             </tbody>
         </table>
-        {% else %}
-	        <h3>There are no calculations</h3>
-    {% endif %}
-
-
-
-
-
+</div>
 {% endblock %}

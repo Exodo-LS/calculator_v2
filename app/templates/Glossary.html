@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Calculation Results{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+<div style="padding: 1em">
+  <section>
+    <div style="padding: 0.5em">
+      <h1>Welcome to the Glossary</h1>
+      <p>This page serves as a glossary for relevant terms.</p>
+    </div>
+  </section>
+  <section style="padding: 1.5em">
+    <div>
+      <h3>Useful Glossary Terms</h3>
+      <p>Here are some useful terms to make understand this a lot easier</p>
+      <ul style="list-style-type: none">
+        <li><b>Object Oriented Programming</b> - A programming approach that uses the implementation of objects to solve problems</li>
+        <li><b>Class</b> - Blueprint of the object</li>
+        <li><b>Object</b> - An instantiation of a class</li>
+        <li><b>Instantiation</b> - The process of taking a class definition and creating an object that you can use in a program</li>
+        <li><b>Method</b> - Functions defined in a class</li>
+        <li><b>Static</b> - The member is on a class level rather on the instance level (can be variable or function)</li>
+        <li><b>Class Method</b> - A method that is bound to the class and not the object of the class</li>
+        <li><b>Constructor</b> - A special type of member function of a class which initializes objects of a class</li>
+        <li><b>Factory</b> - An object for creating other objects</li>
+        <li><b>Namespace</b> - A declarative region that provides a scope to the identifiers inside it</li>
+        <li><b>Fixture</b> - A function that will run each time you pass it to a test</li>
+        <li><b>Type Hint</b> - A formal solution to statically indicate the type of value within your code</li>
+        <li><b>Type Cast</b> - When you assign a value of one primitive data type to another type</li>
+        <li><b>Unit Test</b> - Validates that your functions are fit for use </li>
+        <li><b>Facade</b> - An object that provides a simplified interface to a larger body of code, such as a class library</li>
+        <li><b>Design Patterns Used</b> - A repeatable solution to a software engineering problem</li>
+        <li><b>Property</b> -  Are characteristics or attributes of an object</li>
+        <li><b>Inheritance</b> - Creating a new class for using details of an existing class without modifying it</li>
+        <li><b>Encapsulation</b> - Prevents data from direct modification</li>
+        <li><b>Abstraction</b> - Hiding the unnecessary details from the users</li>
+        <li><b>Polymorphism</b> - The ability to use a common interface for multiple forms</li>
+      </ul>
+    </div>
+  </section>
+</div>
+{% endblock %}
