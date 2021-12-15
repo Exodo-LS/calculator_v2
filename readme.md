@@ -4,3 +4,6 @@
 
 Flash Message:  
 ![Flask Flash Image](app/static/images/Flash.png)
+
+Table Generation:
+![Flask Flash Image](app/static/images/Tables.png)
