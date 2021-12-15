@@ -7,5 +7,6 @@ class Addition(Calculation):
         """get the addition results"""
         sum_of_values = 0.0
         for value in self.values:
-            sum_of_values = value + sum_of_values
+            add = self.values[0]
+            sum_of_values = value + add
         return sum_of_values

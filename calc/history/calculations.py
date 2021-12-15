@@ -1,8 +1,12 @@
 """Calculation history Class"""
+
 from calc.calculations.addition import Addition
 from calc.calculations.subtraction import Subtraction
 from calc.calculations.multiplication import Multiplication
 from calc.calculations.division import Division
+
+
+
 class Calculations:
     """Calculations class manages the history of calculations"""
     history = []
@@ -10,9 +14,11 @@ class Calculations:
     @staticmethod
     def readHistoryFromCSV():
         """Read the history from csv and put it into the history """
+
     @staticmethod
     def writeHistoryToCSV():
         """Write the history to csv file"""
+
     # pylint: disable=too-few-public-methods
     @staticmethod
     def clear_history():
@@ -65,3 +71,7 @@ class Calculations:
         """Add a division object to history using factory method create"""
         Calculations.add_calculation(Division.create(values))
         return True
+    @staticmethod
+    def get_history():
+        """Gets History"""
+        return Calculations.get_last_calculation_result_value()

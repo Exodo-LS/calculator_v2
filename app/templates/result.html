@@ -19,36 +19,34 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
-    <strong>Value 1: </strong> {{ value1 }} <br>
-    <strong>Value 2: </strong> {{ value2 }} <br>
-    <strong>Operation: </strong> {{ operation }} <br>
-    <strong>Result: </strong> {{ result }}
 
+    <h2>Result Table</h2>
+    <p>The completed operation will be displayed in the form of a table. Do not worry you will be able to see all the
+    results in another table.</p>
+    <br>
     {% if data %}
         <table id="data" class="table table-striped">
             <thead>
                 <tr>
-                    <th>Date</th>
-                    <th>ID</th>
-                    <th>Position</th>
-                    <th>Status</th>
+                    <th><strong>Value 1: </strong> </th>
+                    <th><strong>Value 2: </strong> </th>
+                    <th><strong>Operation: </strong></th>
+                    <th><strong>Result: </strong></th>
                 </tr>
             </thead>
             <tbody>
                 {% for item in data %}
-                <!--- This will not work you have to think about it--->
-                <TR>
-                    <TD class="c1"><IMG src="favicon.ico"></TD>
-                    <TD class="c2">{{ item.date }}</TD>
-                    <TD class="c3">{{ item.id }}</TD>
-                    <TD class="c4"><SPAN>{{ item.position }}</SPAN></TD>
-                    <TD class="c5"><SPAN>{{ item.status }}</SPAN></TD>
-                </TR>
+                <tr>
+                    <td class="c1">{{ item }}</td>
+                    <td class="c2">{{ item }}</td>
+                    <td class="c3"><SPAN>{{ item }}</SPAN></td>
+                    <td class="c4"><SPAN>{{ item }}</SPAN></td>
+                </tr>
             {% endfor %}
             </tbody>
         </table>
         {% else %}
-	        <h1>There are no calculations</h1>
+	        <h3>There are no calculations</h3>
     {% endif %}
 
 

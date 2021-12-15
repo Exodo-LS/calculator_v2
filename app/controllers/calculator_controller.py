@@ -3,6 +3,7 @@ from calc.calculator import Calculator
 from flask import render_template, request, flash, redirect, url_for, session
 
 
+
 class CalculatorController(ControllerBase):
     @staticmethod
     def post():
@@ -40,17 +41,6 @@ class CalculatorController(ControllerBase):
     2.  fix the controller to read the the csv to history first
     3.  Fix the controller to write the history to csv after you add the calculation to history
     4.  Make a method on the calculator to return the history in the format you want to print in the template
-    
-    Optional
-       Fix it so that you store the type of calculation and perform the calculation at runtime, 
-       so you don't store the raw result
-       
-       IF you want to be fancy you can change the delimiter for the file to semicolon and write your tuple of value to the file
-       
-       Values, Operation
-       1,2,3,4; Addition
-       1,2,3,4; Addition
-    
     """
 
 
