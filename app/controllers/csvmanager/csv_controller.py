@@ -14,7 +14,6 @@ class CSVController:
         """Writes to the csv file"""
         data_frame = pd.read_csv(CSVController.csv_directory())
         data_frame.loc[len(data_frame.index)] = [value1, value2, operation, result]
-        data_frame = data_frame.drop_duplicates()
         data_frame.to_csv(CSVController.csv_directory(), index=False)
     @staticmethod
     def read():
